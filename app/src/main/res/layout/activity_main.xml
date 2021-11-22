@@ -11,13 +11,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/black"
-        android:text="Reset"/>
+        android:text="Reset"
+        android:layout_alignParentRight="true"/>
 
     <TextView
         android:id="@+id/gracz1punkty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Gracz 1 punkty: 0"
+        android:layout_alignParentTop="true"
         android:layout_below="@id/buttonReset"
         android:textSize="28sp" />
 
@@ -27,84 +29,88 @@
         android:layout_height="wrap_content"
         android:text="Gracz 2 punkty: 0"
         android:textSize="28sp"
-        android:layout_above="@id/uklad"
         android:layout_marginBottom="100dp"
         android:layout_below="@id/gracz1punkty"/>
 
     <LinearLayout
         android:id="@+id/uklad"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="300dp"
         android:orientation="vertical"
-        android:layout_centerInParent="true">
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:weightSum="3">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_weight="1">
 
             <Button
                 android:id="@+id/button00"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="5dp"/>
 
             <Button
                 android:id="@+id/button01"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="5dp"/>
 
             <Button
                 android:id="@+id/button02"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="5dp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_weight="1">
 
             <Button
                 android:id="@+id/button10"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="5dp"/>
 
             <Button
                 android:id="@+id/button11"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="5dp"/>
 
             <Button
                 android:id="@+id/button12"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="5dp"/>
 
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_weight="1">
 
             <Button
                 android:id="@+id/button20"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="5dp"/>
 
             <Button
                 android:id="@+id/button21"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="5dp"/>
 
             <Button
                 android:id="@+id/button22"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="5dp"/>
 
         </LinearLayout>
@@ -115,11 +121,12 @@
         android:id="@+id/wybierzText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/uklad"
+        android:layout_above="@id/znak"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:text="Teraz Gra: "
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        />
 
     <TextView
         android:id="@+id/znak"
@@ -127,7 +134,7 @@
         android:layout_height="wrap_content"
         android:text="X"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/wybierzText"
+        android:layout_above="@id/uklad"
         android:textSize="26sp"/>
 
 </RelativeLayout>
